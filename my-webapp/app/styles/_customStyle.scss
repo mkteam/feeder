@@ -1,0 +1,58 @@
+$light-gray: #D0D0D0 !default;
+body{
+  letter-spacing: 3px;
+}
+a.navbar-brand{
+  font-size: large;
+}
+.navbar{
+  margin-bottom: 0;
+  background-color: $light-gray;
+  a, nav >li > a:hover{
+    color: $body-bg;
+    background-color: transparent!important;
+    font-size: 11px; letter-spacing: 3px; 
+    text-transform: uppercase;
+  }
+}
+
+.white{
+  color: white;
+}
+
+// big message box in center
+.jumbotron{
+  height: 900px - 80px;
+  background-color: $light-gray !important;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  // center positioned box
+  .box{
+    color: #FFFFFF;
+    width: 551px;
+    display: inline-block;
+    .feeder-is-here{
+      font-family: Raleway;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 24px;
+      margin-bottom: 1em;
+    }
+    .free-sketch-3-one-pag{
+      font-size: 40px;
+      line-height: 58px;
+      margin-bottom: 1em;
+    }
+    .well-the-way-they-m{
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  // arrow on bottom fixed to flex end
+  .bottom{
+    align-self: flex-end;
+    color: white;
+  }
+}

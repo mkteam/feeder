@@ -1,0 +1,120 @@
+$icon-font-path: '../fonts/';
+
+// ##########################
+// custom bootstrap variables
+// ##########################
+$link-hover-color:      none !default;
+$link-hover-decoration: none !default;
+$font-family-sans-serif:  'Open Sans', sans-serif !default;
+$font-family-raleway:     'Raleway', sans-serif !default;
+$font-family-dosis:       'Dosis', sans-serif !default;
+$line-height-base:        1.208571429 !default; // 20/14
+$headings-font-weight:    300 !default;
+$headings-line-height:    1.2 !default;
+$border-radius-base:        0px !default;
+$border-radius-large:       0px !default;
+$border-radius-small:       0px !default;
+$navbar-height:                    80px !default;
+$navbar-default-color:             #fff !default;
+$navbar-default-bg:                #D0D0D0 !default;
+$navbar-default-link-color:                transparent !default;
+$navbar-default-link-hover-color:          transparent !default;
+$navbar-default-link-hover-bg:             #D0D0D0 !default;
+$navbar-default-link-active-color:         #fff !default;
+$navbar-default-link-active-bg:            #D0D0D0 !default;
+$navbar-default-link-disabled-color:       #fff !default;
+$navbar-default-brand-hover-color:         #fff !default;
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// constants
+$light-gray: #D0D0D0 !default;
+
+// mixin
+@mixin letters-normal{ letter-spacing: 0; }
+@mixin letters-3px{ letter-spacing: 3px; }
+@mixin no-gutters{ padding-left: 0; padding-right: 0; }
+
+// ######### custom layout ########
+body{
+  @include letters-3px;
+}
+a.navbar-brand{
+  font-size: large;
+}
+.navbar{
+  margin-bottom: 0;
+  background-color: $light-gray;
+  a, nav >li > a:hover{
+    color: $body-bg;
+    background-color: transparent!important;
+    font-size: 11px; text-transform: uppercase;
+  }
+}
+
+.white{
+  color: white;
+}
+
+// big message box in center
+.lead{
+  height: 900px - $navbar-height;
+  background-color: $light-gray !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  // center positioned box
+  .box{
+    color: #FFFFFF;
+    max-width: 551px;
+    display: inline-block;
+    .title{
+      font-family: Raleway;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 24px;
+      margin-bottom: 1em;
+    }
+    .bigtitle{
+      font-size: 40px;
+      line-height: 58px;
+      margin-bottom: 1em;
+    }
+    .subtitle{
+      font-size: 16px;
+      @include letters-normal;
+      line-height: 20px;
+    }
+  }
+  // arrow on bottom fixed to flex end
+  .bottom{
+    align-self: flex-end;
+    color: white;
+    margin-bottom: 2em;
+  }
+}
+
+.box2,
+.box3{
+  @include letters-normal;
+  padding: 75px 0 95px 0;
+  .desc{
+    margin-top: 39px;
+    color: #777777; 
+    font-size: 15px;  
+    line-height: 30px;
+  } 
+}
+
+.box3{
+  height: 685px;
+  [class*=col-]{
+    @include no-gutters;  
+  }
+  .box{
+    background-color: #F5F5F5;
+    padding: 10% 15% 10% 5%;
+  }
+}
